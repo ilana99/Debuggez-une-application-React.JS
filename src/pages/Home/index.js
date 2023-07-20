@@ -1,3 +1,4 @@
+import { useData } from "../../contexts/DataContext";
 import Menu from "../../containers/Menu";
 import ServiceCard from "../../components/ServiceCard";
 import EventCard from "../../components/EventCard";
@@ -10,10 +11,16 @@ import Logo from "../../components/Logo";
 import Icon from "../../components/Icon";
 import Form from "../../containers/Form";
 import Modal from "../../containers/Modal";
-import { useData } from "../../contexts/DataContext";
+
 
 const Page = () => {
-  const {last} = useData()
+  const { data } = useData();
+  let last = null; 
+  if (data && data.events) {
+    last = data.events[data.events.length - 1];
+  };
+  
+
   return <>
     <header>
       <Menu />
@@ -123,6 +130,7 @@ const Page = () => {
           small
           label="boom"
         />
+
       </div>
       <div className="col contact">
         <h3>Contactez-nous</h3>

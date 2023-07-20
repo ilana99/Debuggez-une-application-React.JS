@@ -16,7 +16,7 @@ const Select = ({
   const [value, setValue] = useState();
   const [collapsed, setCollapsed] = useState(true);
   const changeValue = (newValue) => {
-    onChange();
+    onChange(newValue); //
     setValue(newValue);
     setCollapsed(newValue);
   };
@@ -24,8 +24,8 @@ const Select = ({
     <div className={`SelectContainer ${type}`} data-testid="select-testid">
       {label && <div className="label">{label}</div>}
       <div className="Select">
-        <ul>
-          <li className={collapsed ? "SelectTitle--show" : "SelectTitle--hide"}>
+        <ul> 
+          <li className={collapsed ? "SelectTitle--show" : "SelectTitle--hide"}> { /* cache "toutes" quand collapsed */ }
             {value || (!titleEmpty && "Toutes")}
           </li>
           {!collapsed && (
