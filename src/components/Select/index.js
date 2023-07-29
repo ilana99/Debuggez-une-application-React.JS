@@ -25,7 +25,7 @@ const Select = ({
       {label && <div className="label">{label}</div>}
       <div className="Select">
         <ul> 
-          <li className={collapsed ? "SelectTitle--show" : "SelectTitle--hide"}> { /* cache "toutes" quand collapsed */ }
+          <li className={collapsed ? "SelectTitle--show" : "SelectTitle--hide"}> { /* cache "toutes/titre" quand collapsed */ }
             {value || (!titleEmpty && "Toutes")}
           </li>
           {!collapsed && (

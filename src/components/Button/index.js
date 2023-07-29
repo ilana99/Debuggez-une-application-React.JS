@@ -60,7 +60,7 @@ Button.propTypes = {
 };
 Button.defaultProps = {
   disabled: false,
-  onClick: () => null,
+  onClick: () => null, 
   type: BUTTON_TYPES.DEFAULT,
   title: "",
   children: null
