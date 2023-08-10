@@ -31,7 +31,7 @@ export const DataProvider = ({ children }) => {
       getData();
     }, []);
 
-  console.log("data:", data); //
+  // console.log("data:", data); 
 
   return (
     <DataContext.Provider
